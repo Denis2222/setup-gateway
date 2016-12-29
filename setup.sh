@@ -10,7 +10,7 @@ apt-get install -y nodejs
 
 #install eth0 stuff
 cd /opt
-git clone https://github.com/KoljaWindeler/CHIP_HUMUS.git 
+git clone https://github.com/Denis2222/CHIP_HUMUS.git
 cd /opt/CHIP_HUMUS/overlay/
 sh ./install.sh
 
