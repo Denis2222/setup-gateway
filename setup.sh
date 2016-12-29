@@ -34,4 +34,4 @@ npm install
 
 #Activate for start at boot. And restart if something goes wrong.
 forever-service install elocky-config --script ./app.js
-shutdown -r now
+#shutdown -r now
