@@ -25,7 +25,9 @@ npm install -g forever
 npm install -g forever-service
 
 #Clone depo
-git clone Gateway
+git clone https://github.com/Denis2222/Gateway.git
+
+cd Gateway
 
 #Node package install
 npm install
