@@ -13,3 +13,23 @@ cd /opt
 git clone https://github.com/KoljaWindeler/CHIP_HUMUS.git 
 cd /opt/CHIP_HUMUS/overlay/
 sh ./install.sh
+
+#Config BLE
+systemctl stop bluetooth #stop now
+systemctl disable bluetooth #stop for next reboot
+hciconfig hci0 up #up right stuff
+
+
+npm install -g bluetooth-hci-socket
+npm install -g forever
+npm install -g forever-service
+
+#Clone depo
+git clone Gateway
+
+#Node package install
+npm install
+
+#Activate for start at boot. And restart if something goes wrong.
+forever-service install elocky-config --script ./app.js
+shutdown -r now
