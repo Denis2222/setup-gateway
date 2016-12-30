@@ -75,7 +75,7 @@ echo "npm -g bluetooth-hci-socket"
 npm install -g bluetooth-hci-socket
 sleep 5
 
-echo "npm -g forever
+echo "npm -g forever"
 npm install -g forever
 sleep 5
 
