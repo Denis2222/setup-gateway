@@ -1,3 +1,7 @@
+#enable SSH
+/bin/rm -v /etc/ssh/ssh_host_*
+dpkg-reconfigure openssh-server
+
 echo "update"
 apt-get update
 sleep 5
@@ -75,12 +79,8 @@ echo "npm -g bluetooth-hci-socket"
 npm install -g bluetooth-hci-socket
 sleep 5
 
-echo "npm -g forever"
-npm install -g forever
-sleep 5
-
-echo "npm -g forever-service"
-npm install -g forever-service
+echo "npm -g pm2"
+npm install -g pm2
 sleep 5
 
 echo "Clone Gateway Depo"
@@ -91,9 +91,9 @@ sleep 5
 #Node package install
 echo "Install Gateway third-party module"
 npm install
-
-sleep 5
-
+sleep 2
 #Activate for start at boot. And restart if something goes wrong.
-forever-service install elocky-config --script ./app.js
+pm2 start elocky --name ./app.js
+sleep 2
+pm2 startup
 #shutdown -r now
