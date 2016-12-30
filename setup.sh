@@ -93,7 +93,7 @@ echo "Install Gateway third-party module"
 npm install
 sleep 2
 #Activate for start at boot. And restart if something goes wrong.
-pm2 start elocky --name ./app.js
+pm2 start ./app.js --name elocky
 sleep 2
 pm2 startup
 #shutdown -r now
